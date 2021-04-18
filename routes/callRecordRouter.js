@@ -6,19 +6,18 @@ const express = require('express');
 
 const router = express.Router();
 
-const ObjectId = mongodb.ObjectId;
 
 router.get('/callRecords', (req, res, next) => {
     CallRecord.fetchAll()
         .then(callRecords => {
-        res.render('callRecords-list', {
-            callRecords: callRecords,
-            pageTitle: 'All CallRecords',
-            path: '/callRecords'
-        });
+                res.render('callRecords-list', {
+                callRecords: callRecords,
+                pageTitle: 'All CallRecords',
+                path: '/callRecords'
+            });
         })
         .catch(err => {
-        console.log(err);
+            console.log(err);
         });
 });
 
@@ -51,7 +50,7 @@ router.post('/add-callRecord', (req, res, next) => {
             res.redirect('/callRecords');
         })
         .catch(err => {
-        console.log(err);
+            console.log(err);
         });
   });
 
