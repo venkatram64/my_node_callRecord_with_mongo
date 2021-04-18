@@ -1,7 +1,7 @@
 {
   "name": "my_node_call_record_with_mongo",
   "version": "1.0.0",
-  "description": "",
+  "description": "npm  i --save mongodb",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js",
